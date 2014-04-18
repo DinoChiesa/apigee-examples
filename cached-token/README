@@ -1,5 +1,0 @@
-This proxy shows how to cache an oauthv2 token, 
-and then re-use the cached values for enforcing a quota, 
-in subsequent requests. 
-
-
