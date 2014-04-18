@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <Flows>
+        <Flow name="Oauth cached quota">
+            <Description/>
+            <Request>
+                <Step><Name>lookupcache-1</Name></Step>
+                <Step>
+                    <Condition>accessToken_cache is null</Condition>
+                    <Name>oauthv20-1</Name>
+                </Step>
+                <Step>
+                    <Condition>accessToken_cache is null</Condition>
+                    <Name>javascript-composeCacheValue</Name>
+                </Step>
+                <Step>
+                    <Condition>accessToken_cache is null</Condition>
+                    <Name>populatecache-1</Name>
+                </Step>
+                <Step>
+                    <Condition>accessToken_cache != null</Condition>
+                    <Name>javascript-extractValuesFromCachedItem</Name>
+                </Step>
+                <Step><Name>quota-1</Name></Step>
+                <!-- other policies here -->
+            </Request>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/oauth-cached-quota") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="Flow-1">
+            <Description>Flow to handle unknown requests</Description>
+            <Request>
+                <Step><Name>raisefault-1</Name></Step>
+            </Request>
+            <Response/>
+        </Flow>
+    </Flows>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response/>
+    </PreFlow>
+    <HTTPProxyConnection>
+        <BasePath>/v1/example-20140418</BasePath>
+        <VirtualHost>default</VirtualHost>
+        <Properties/>
+    </HTTPProxyConnection>
+    <RouteRule name="route-default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response>
+            <Step>
+              <Condition>request.header.X-skiplog != "1"</Condition>
+              <Name>javascript-emitTimes</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+</ProxyEndpoint>

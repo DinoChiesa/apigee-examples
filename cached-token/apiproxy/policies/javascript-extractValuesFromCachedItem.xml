@@ -1,0 +1,4 @@
+<Javascript enabled='true' continueOnError='false' async='false' name='javascript-extractValuesFromCachedItem'>
+  <DisplayName>javascript-extractValuesFromCachedItem</DisplayName>
+  <ResourceURL>jsc://extractValuesFromCachedItem.js</ResourceURL>
+</Javascript>

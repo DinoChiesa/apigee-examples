@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Javascript async="false" continueOnError="false" enabled="true" timeLimit="5000" name="javascript-emitTimes">
+    <DisplayName>JavaScript-emitTimes</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ResourceURL>jsc://emitTimes.js</ResourceURL>
+</Javascript>

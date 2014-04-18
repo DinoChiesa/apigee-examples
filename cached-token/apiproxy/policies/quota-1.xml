@@ -1,0 +1,14 @@
+<Quota name="quota-1">
+  <Interval ref="apiproduct.developer.quota.interval"/>
+  <TimeUnit ref="apiproduct.developer.quota.timeunit"/>
+  <Allow countRef="apiproduct.developer.quota.limit"/>
+
+  <!--
+  <Allow count="3"/>
+  <Interval>1</Interval>
+  <TimeUnit>second</TimeUnit>
+  -->
+
+  <Identifier ref="client_id"/>
+  <Distributed>false</Distributed>
+</Quota>

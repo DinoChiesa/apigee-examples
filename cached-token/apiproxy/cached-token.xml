@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="cached-token">
+    <ConfigurationVersion minorVersion="0" majorVersion="4"/>
+    <CreatedAt>1395557156061</CreatedAt>
+    <CreatedBy>se+example@apigee.com</CreatedBy>
+    <Description></Description>
+    <DisplayName>cached-token example</DisplayName>
+    <LastModifiedAt>1395557156061</LastModifiedAt>
+    <LastModifiedBy>se+example@apigee.com</LastModifiedBy>
+    <Policies>
+        <Policy>lookupcache-1</Policy>
+        <Policy>oauthv20-1</Policy>
+        <Policy>populatecache-1</Policy>
+        <Policy>quota-1</Policy>
+        <Policy>raisefault-1</Policy>
+    </Policies>
+    <ProxyEndpoints/>
+    <Resources/>
+    <TargetServers/>
+    <TargetEndpoints>
+      <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+    <validate>false</validate>
+</APIProxy>

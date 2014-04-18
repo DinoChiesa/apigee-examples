@@ -1,0 +1,4 @@
+<Javascript enabled='true' continueOnError='false' async='false' name='javascript-composeCacheValue'>
+  <DisplayName>javascript-composeCacheValue</DisplayName>
+  <ResourceURL>jsc://composeCacheValue.js</ResourceURL>
+</Javascript>

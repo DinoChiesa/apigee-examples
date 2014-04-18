@@ -1,0 +1,8 @@
+<AssignMessage name='AssignVariable-1'>
+  <DisplayName>AssignVariable-1</DisplayName>
+  <IgnoreUnresolvedVariables>false</IgnoreUnresolvedVariables>
+  <AssignVariable>
+    <Name>target.copy.pathsuffix</Name>
+    <Value>false</Value>
+  </AssignVariable>
+</AssignMessage>

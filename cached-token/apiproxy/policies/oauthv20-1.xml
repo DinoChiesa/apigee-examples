@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<OAuthV2 async="false" continueOnError="false" enabled="true" name="oauthv20-1">
+    <DisplayName>OAuthv20-1</DisplayName>
+    <FaultRules/>
+    <Properties/>
+    <ExternalAuthorization>false</ExternalAuthorization>
+    <Operation>VerifyAccessToken</Operation>
+    <GenerateResponse enabled="true"/>
+  <AccessToken>request.queryparam.accesstoken</AccessToken>
+</OAuthV2>
