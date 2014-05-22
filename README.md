@@ -6,6 +6,6 @@ This is just starting out, but I'll fill in this repo over time with things rela
 Today there are two classes of examples:
 
  - scripts and tools
- - sampel proxies
+ - sample proxies
 
 Have fun exploring! 
